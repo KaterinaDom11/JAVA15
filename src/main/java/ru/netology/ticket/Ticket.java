@@ -8,13 +8,15 @@ public class Ticket implements Comparable<Ticket> {
     private int price; // цена
     private int timeFrom; // время вылета (по москве)
     private int timeTo; // время прилёта (по москве)
+    private int timeFlight;
 
-    public Ticket(String from, String to, int price, int timeFrom, int timeTo) {
+    public Ticket(String from, String to, int price, int timeFrom, int timeTo, int timeFlight) {
         this.from = from;
         this.to = to;
         this.price = price;
         this.timeFrom = timeFrom;
         this.timeTo = timeTo;
+        this.timeFlight = timeFlight;
     }
 
     public String getFrom() {
@@ -37,6 +39,9 @@ public class Ticket implements Comparable<Ticket> {
         return timeTo;
     }
 
+    public int getTimeFlight() {
+        return timeFlight;
+    }
 
     // Вспомогательные методы для корректной работы equals
     @Override
